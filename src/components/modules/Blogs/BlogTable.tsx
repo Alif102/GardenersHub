@@ -94,7 +94,7 @@ const BlogTable = ({ post }: BlogTableProps) => {
           <FaCalendarAlt />
           {new Date(post.createdAt).toLocaleDateString()}
         </div>
-      </td>
+      </td>z
     </motion.tr>
   );
 };
