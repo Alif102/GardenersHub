@@ -9,7 +9,7 @@ export const deleteBlog = async (id: number | string) => {
     method: "DELETE",
   });
 
-  revalidateTag("BLOGS");
+  revalidateTag("BLOGS", {});
   revalidatePath("/dashboard/blogs");
 };
 

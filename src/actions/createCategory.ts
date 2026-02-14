@@ -22,7 +22,7 @@ export const createCategory = async (data: FormData) => {
   const result = await res.json();
 
   if (result?.id) {
-    revalidateTag("CATEGORIES");
+    revalidateTag("CATEGORIES" , {});
   }
 
   return result;
