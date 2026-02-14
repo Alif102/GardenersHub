@@ -38,7 +38,7 @@ const SeasonalGuide: React.FC = () => {
     ],
   };
 
-  const seasonIcons: Record<Season, JSX.Element> = {
+  const seasonIcons: Record<Season, React.ReactNode> = {
     spring: <FaLeaf className="text-green-500" />,
     summer: <FaSun className="text-yellow-500" />,
     fall: <FaTree className="text-orange-500" />,
