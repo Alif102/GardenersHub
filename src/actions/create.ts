@@ -28,10 +28,17 @@ export const create = async (data: FormData) => {
 
   const result = await res.json();
 
+  // if (result?.id) {
+  //   revalidateTag("BLOGS");
+  //   revalidatePath("/blogs");
+  //   redirect("/");
+  // }
   if (result?.id) {
-    revalidateTag("BLOGS");
-    revalidatePath("/blogs");
-    redirect("/");
-  }
+  // Corrected usage
+  revalidateTag("BLOGS", {}); 
+  revalidatePath("/blogs");
+  redirect("/");
+}
+
   return result;
 };
