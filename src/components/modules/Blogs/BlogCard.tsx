@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function BlogCard({ post }: { post: any }) {
+  console.log(post)
   return (
     <Link
       href={`/browse-tips/${post.id}`}
@@ -22,7 +23,7 @@ export default function BlogCard({ post }: { post: any }) {
 
             {/* ✅ Plant Type Badge */}
             <span className="absolute top-3 right-3 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
-              {post?.plantType}
+              {post?.categoryName}
             </span>
           </div>
         ) : (
